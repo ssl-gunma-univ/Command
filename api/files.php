@@ -10,34 +10,19 @@ putenv('LANG=C.UTF-8');
 if ($_POST['path'] == null) {
   $dirs = array(
     array(
-      'name' => 'rs',
-      'display' => 'arXiv\'20',
-      'dir' => './sol/hor/arXiv20'
+      'name' => 'contents',
+      'display' => 'C',
+      'dir' => './examples/c'
     ),
     array(
-      'name' => 'rs',
-      'display' => 'SCP\'18',
-      'dir' => './sol/hor/SCPex'
+      'name' => 'contents',
+      'display' => 'Java',
+      'dir' => './examples/java'
     ),
     array(
-      'name' => 'rs',
-      'display' => 'ConfComp\'18',
-      'dir' => './sol/hor/Cops'
-    ),
-    array(
-      'name' => 'rs',
-      'display' => 'ICFP\'17',
-      'dir' => './sol/hor/JEX'
-    ),
-    array(
-      'name' => 'rs',
-      'display' => 'Polymorphic',
-      'dir' => './sol/hor/PolySOL'
-    ),
-    array(
-      'name' => 'rs',
-      'display' => 'GHC Rules',
-      'dir' => './sol/hor/Haskell'
+      'name' => 'contents',
+      'display' => 'Haskell',
+      'dir' => './examples/haskell'
     )
   );
 
