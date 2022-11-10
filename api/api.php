@@ -1,4 +1,5 @@
 <?php
+require("webcui_lib.php");
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Content-Type, Origin, X-Requested-With');
@@ -19,9 +20,7 @@ if(in_array($cmdary[0], $cmdlist)){
     echo "<font color=\"red\">&gt; " . $cmd . "</font><br>"; //コマンドを色付きで表示
     exec($cmd, $output); //実行
     //表示
-    for ($i = 0; $i < count($output); $i++) {
-        echo str_replace(" ", "&nbsp;", $output[$i]) . "<br>"; //空白をhtml用に変換
-    }
+    printOutput($output);
     echo '<br>';
 }
 else{
