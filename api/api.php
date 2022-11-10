@@ -17,6 +17,33 @@ $cmdary = explode(' ', $cmd);
 $cmdlist = ['ls', 'cat'];
 
 if(in_array($cmdary[0], $cmdlist)){
+    //option
+    $option = " ";
+    
+    if($_POST['help'] == 'true')
+        $option = $option . "--help ";
+
+    if($cmdary[0] == 'ls'){
+        if($_POST['l'] == 'true')
+            $option = $option . "-l ";
+        if($_POST['a'] == 'true')
+            $option = $option . "-a ";
+    }
+    
+    if($cmdary[0] == 'cat'){
+        if($_POST['n'] == 'true')
+            $option = $option . "-n ";
+        if($_POST['A'] == 'true')
+            $option = $option . "-A ";
+    }
+    
+    //cmdを作り直す
+    $cmd = $cmdary[0] . $option;
+    for($i = 1; $i < count($cmdary); $i++){
+        $cmd = $cmd . $cmdary[$i];
+    }
+    
+
     echo "<font color=\"red\">&gt; " . $cmd . "</font><br>"; //コマンドを色付きで表示
     exec($cmd, $output); //実行
     //表示
