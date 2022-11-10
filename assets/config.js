@@ -5,9 +5,9 @@ export const config = {
 
   address: '/webcui/command/',      // http://localhost:3000/[address]
 
-  webApiUrl: `http://localhost:80/webcui/command/api/api.php`, //`http://solweb.mydns.jp/webcui/command/api/api.php`, //
+  webApiUrl: `http://solweb.mydns.jp/webcui/command/api/api.php`, //`http://localhost:80/webcui/command/api/api.php`, //
 
-  consoleLocation: 'bottom',    // Placing the console. [left | right | top | bottom]
+  consoleLocation: 'right',    // Placing the console. [left | right | top | bottom]
   toolbarLocation: 'left',    // Placing the toolbar. [left | right]
   noSpace: true,
   
@@ -38,7 +38,7 @@ export const config = {
       enable: true,
       icon: 'mdi-file-multiple',
       text: 'Files',
-      webApiUrl: 'http://localhost:80/webcui/command/api/files.php', //'http://???/webcui/???/api/files.php',
+      webApiUrl: 'http://solweb.mydns.jp/webcui/command/api/files.php',//'http://localhost:80/webcui/command/api/files.php', //
     },
     variables: {
       enable: false,
