@@ -23,8 +23,12 @@ function getFloat($paramName) {
     return (float)$param;
 }
 
+// function printLine($line) {
+//     echo str_replace(" ", "&nbsp;", htmlspecialchars($line, ENT_QUOTES)) . "<br>";
+// }
+
 function printLine($line) {
-    echo str_replace(" ", "&nbsp;", htmlspecialchars($line, ENT_QUOTES)) . "<br>";
+    echo str_replace("font&nbsp;", "font ", str_replace(" ", "&nbsp;", $line)) . "<br>";
 }
 
 function printOutput($output) {
