@@ -37,8 +37,8 @@ export const config = {
     files: {
       enable: true,
       icon: 'mdi-file-multiple',
-      text: 'Examples',
-      webApiUrl: '', //'http://???/webcui/???/api/files.php',
+      text: 'Files',
+      webApiUrl: 'http://localhost:80/webcui/command/api/files.php', //'http://???/webcui/???/api/files.php',
     },
     variables: {
       enable: false,
